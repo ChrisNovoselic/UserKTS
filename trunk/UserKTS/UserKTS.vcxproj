@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C42A567-D083-4C0B-9E5D-B7D32FBB6DA8}</ProjectGuid>
+    <RootNamespace>UserKTS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v100</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v100</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\$(ProjectName);..\..\HCppClassLibrary;..\..\HCppClassLibrary\include;$(SolutionDir)\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>version.lib;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Lib\odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\HCppClassLibrary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\$(ProjectName);..\..\include;$(SolutionDir)\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>version.lib;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Lib\odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\$(ProjectName);..\..\include;$(SolutionDir)\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;NDEBUG;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>version.lib;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Lib\odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\$(ProjectName);..\..\include;$(SolutionDir)\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;NDEBUG;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>version.lib;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Lib\odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDatabase.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hdatabasesql.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlg.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlgChoiceDirectory.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileInfo.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileLog.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HRecordset.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hstring.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadDirectoryWatched.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadFileLog.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinApp.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinThread.cpp" />
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\lib_dttm.cpp" />
+    <ClCompile Include="..\common\htreectrlkts.cpp" />
+    <ClCompile Include="..\common\hdbsettings.cpp" />
+    <ClCompile Include="..\common\HWinAppKTS.cpp" />
+    <ClCompile Include="..\common\HContentTemplate.cpp" />
+    <ClCompile Include="..\common\HData.cpp" />
+    <ClCompile Include="..\common\HDateTimeInterval.cpp" />
+    <ClCompile Include="..\common\HDlgKTS.cpp" />
+    <ClCompile Include="..\common\HDlgKTSFiles.cpp" />
+    <ClCompile Include="..\common\HEnerg5Data.cpp" />
+    <ClCompile Include="..\common\HEnerg6Data.cpp" />
+    <ClCompile Include="..\common\HEnergData.cpp" />
+    <ClCompile Include="..\common\HObjectTemplate.cpp" />
+    <ClCompile Include="..\common\HOnceLineTemplate.cpp" />
+    <ClCompile Include="..\common\HTornado1Data.cpp" />
+    <ClCompile Include="..\common\HTornado6Data.cpp" />
+    <ClCompile Include="..\common\HTornadoData.cpp" />
+    <ClCompile Include="..\common\HCheckStateKTS.cpp" />
+    <ClCompile Include="HCheckStateTemplate.cpp" />
+    <ClCompile Include="HDlgChoiceDirectoryTemplate.cpp" />
+    <ClCompile Include="HThreadCreateTemplate.cpp" />
+    <ClCompile Include="HThreadDescription.cpp" />
+    <ClCompile Include="HThreadUndoClear.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="TreeCtrlTemplate.cpp" />
+    <ClCompile Include="UserKTS.cpp" />
+    <ClCompile Include="UserKTSDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\hdatabasesql.h" />
+    <ClInclude Include="..\..\include\hwinapp.h" />
+    <ClInclude Include="..\common\hwinappKTS.h" />
+    <ClInclude Include="..\common\htreectrlKTS.h" />
+    <ClInclude Include="..\common\common_identifiers.h" />
+    <ClInclude Include="..\common\HContentTemplate.h" />
+    <ClInclude Include="..\common\HData.h" />
+    <ClInclude Include="..\common\HDlgKTS.h" />
+    <ClInclude Include="..\common\HDlgKTSFiles.h" />
+    <ClInclude Include="..\common\HDateTimeInterval.h" />
+    <ClInclude Include="..\common\HEnerg5Data.h" />
+    <ClInclude Include="..\common\HEnerg6Data.h" />
+    <ClInclude Include="..\common\HEnergData.h" />
+    <ClInclude Include="..\common\HObjectTemplate.h" />
+    <ClInclude Include="..\common\HOnceLineTemplate.h" />
+    <ClInclude Include="..\common\HTornado1Data.h" />
+    <ClInclude Include="..\common\HTornado6Data.h" />
+    <ClInclude Include="..\common\HTornadoData.h" />
+    <ClInclude Include="..\common\HCheckStateKTS.h" />
+    <ClInclude Include="HCheckStateTemplate.h" />
+    <ClInclude Include="HThreadCreateTemplate.h" />
+    <ClInclude Include="HThreadDescription.h" />
+    <ClInclude Include="..\..\include\HThreadDirectoryWatched.h" />
+    <ClInclude Include="HThreadUndoClear.h" />
+    <ClInclude Include="identifiers.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TreeCtrlTemplate.h" />
+    <ClInclude Include="UserKTS.h" />
+    <ClInclude Include="UserKTSDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UserKTS.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\res\H_48.ico" />
+    <None Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\res\icon_treectrl_state_checked.ico" />
+    <None Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\res\icon_treectrl_state_mixed.ico" />
+    <None Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\res\icon_treectrl_state_ro_checked.ico" />
+    <None Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\res\icon_treectrl_state_ro_unchecked.ico" />
+    <None Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\res\icon_treectrl_state_unchecked.ico" />
+    <None Include="res\toolbar_main.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="UserKTS.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

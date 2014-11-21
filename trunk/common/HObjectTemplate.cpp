@@ -346,7 +346,10 @@ void HObjectTemplate::SetTarget (HInfoTemplate *pIT, CTime tmCurrent, BOOL bChec
     CTimeSpan tmSpanDiff;
     LONGLONG lCountInterval, lRemains;
     CString strTemp;
-    
+    SYSTEMTIME stm;
+
+    tmCurrent.GetAsSystemTime (stm);
+
     //РАБОТа
 	//ОТЛАДКа
 	/*
@@ -362,86 +365,95 @@ void HObjectTemplate::SetTarget (HInfoTemplate *pIT, CTime tmCurrent, BOOL bChec
     //Случайно
     m_tmSpanInterval = CTime (1977, 1, 1, 13, 47, 31) - CTime (1977, 1, 1, 0, 0, 0); // 3600, 
     strSpanInterval = m_tmSpanInterval.Format ("%H:%M:%S");
-    
+
     m_tmLastWrite = CTime (2011, 12, 12, 1, 30, 54);
     strLastWriteTime = m_tmLastWrite.Format ("%d.%m.%Y %H:%M:%S");
-    
+
     for (h = 0; h < 24; h ++)
     {
         for (m = 0; m < 60; m ++)
         {
             for (s = 0; s < 60; s ++)
             {
-    
                 tmCurrent  = CTime (2011, 12, 13, h, m, s);
     */
 				//Секунды НЕ интересны
 	            //tmCurrent -= tmCurrent.GetSecond ();
 	//            strCurrentTime = tmCurrent.Format ("%d.%m.%Y %H:%M:%S");
-	            
+
 	            //Учитываем смещение запуска задачи, её ВЫПОЛНЕНия, и ИСКУССТВЕННО записываемого дата/время модификации (В СЕКУНДАХ)
-	            
+
 	            //Определяем РАСШИРЕНИЕ по крайнему (самому молодому)
 	            //tmSpanDiff = tmCurrent - m_tmLastWrite;
-	            
+
 	            //Определяем РАСШИРЕНИЕ по первому (самому старому)
 	            //tmSpanDiff = tmCurrent - m_tmFirstWrite;
 	            //tmSpanDiff = tmCurrent - (m_tmFirstWrite + ((m_tmSpanTask.GetTotalSeconds () - m_tmSpanModify.GetTotalSeconds ()) + m_tmSpanWork.GetTotalSeconds ()));
 	            //tmSpanDiff = tmCurrent - (m_tmFirstWrite + ((m_tmSpanTask - m_tmSpanModify) + m_tmSpanWork));
-	            
+
 	            int iDiffExtError = m_iFirstExtError;
                 if (iDiffExtError < 0)
                 {
                     MessageBox (AfxGetApp ()->m_pMainWnd->GetSafeHwnd (), _T (""), _T ("Внимание!"), MB_ICONINFORMATION);
-                    
+
                     pIT->iExt = -1;
                     pIT->tmLastWrite = 0;
                 }
                 else
                 {
                     CTimeSpan tmSpanInterval = GetIntervalDeclarative ();
-                
+
 	                if (bCheckState == TRUE)
 	                //if (true)
 	                {
 	                    //tmCurrent -= (m_tmSpanTask - m_tmSpanModify + m_tmSpanWork);
-        	            
+
 	                    //tmCurrent = tmCurrent - (m_tmSpanTask - m_tmSpanModify + m_tmSpanWork);
-        	            
+
 	                    //tmCurrent = tmCurrent - m_tmSpanTask + m_tmSpanModify - m_tmSpanWork;
 	                    tmCurrent -= m_tmSpanTask;
 	                    tmCurrent += m_tmSpanModify;
 	                    tmCurrent -= m_tmSpanWork;
-    	                
+
 	                    if (m_iIdTemplate == 143) // ???
 	                        if (tmCurrent.GetMinute () > tmSpanInterval.GetTotalMinutes ())
 	                            tmCurrent -= tmSpanInterval;
+                            else
+                                ;
+                        else
+                            ;
                     }
                     else
                         ;
-                    
+
 	                //if (m_pHFIFirst->tmLastWritten ().GetMinute () % 5 == 0)
 	                /*if (m_tmSpanInterval.GetTotalSeconds () == 300)
 	                    tmSpanDiff = tmCurrent - resetDigitTensSecond (m_pHFIFirst->tmLastWritten ());
 	                else
 	                    tmSpanDiff = tmCurrent - resetDigitUnitsMinute (m_pHFIFirst->tmLastWritten ());*/
-	                    
+
+                    //Отладка ???
+                    tmCurrent.GetAsSystemTime (stm);
+
                     tmSpanDiff = tmCurrent - resetDigitTensSecond (m_pHFIFirst->tmLastWritten ());
-    	            
+
+                    //Отладка ???
+                    tmCurrent.GetAsSystemTime (stm);
+
                     /*while (iDiffExtError--)
                         tmSpanDiff += m_tmSpanInterval;*/
                     tmSpanDiff += iDiffExtError * tmSpanInterval.GetTotalSeconds ();
-    	            
+
 	                lCountInterval = tmSpanDiff.GetTotalSeconds () / tmSpanInterval.GetTotalSeconds ();
 	                lRemains = tmSpanDiff.GetTotalSeconds () % tmSpanInterval.GetTotalSeconds ();
-    	         
+
                     //if (lCountInterval % (m_iMaxNumberExt - m_iMinNumberExt + 1))
                     //if (m_iFirstExt == m_iMaxNumberExt)
                     //    pIS->iExt = m_iFirstExt + (lCountInterval % (m_iMaxNumberExt - m_iMinNumberExt));
                     //else
                         //pIS->iExt = m_iFirstExt - 1;
                         pIT->iExt = m_pHFIFirst->FileExtAsNumber () + (lCountInterval % (m_iMaxNumberExt - m_iMinNumberExt + 1));
-    	                
+
 	                if (pIT->iExt > m_iMaxNumberExt)
                         pIT->iExt = (m_pHFIFirst->FileExtAsNumber () + (lCountInterval % (m_iMaxNumberExt - m_iMinNumberExt + 1))) - (m_iMaxNumberExt - m_iMinNumberExt + 1);
                     else
@@ -449,9 +461,16 @@ void HObjectTemplate::SetTarget (HInfoTemplate *pIT, CTime tmCurrent, BOOL bChec
 	                        pIT->iExt = pIT->iExt + (m_iMaxNumberExt - m_iMinNumberExt + 1);
                         else
                             ;
-    	            
+
 	                //tmCurrent -= ((m_tmSpanTask.GetTotalSeconds () - m_tmSpanModify.GetTotalSeconds ()) + m_tmSpanWork.GetTotalSeconds ());
 	                tmCurrent -= lRemains;
+
+                    //26.10.2014
+                    if (! (tmSpanInterval < 86400))
+                        tmCurrent += 60 * 60;
+                    else
+                        ;
+
 	                pIT->tmLastWrite = tmCurrent;
                 }
 	/*

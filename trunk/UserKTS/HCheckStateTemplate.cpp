@@ -365,6 +365,14 @@ BOOL HCheckStateTemplate::SetInfo (BOOL bFullInfo) {
         //ŒÚÎ‡‰Í‡
         is.tmLastWrite.GetAsSystemTime (stm);
 
+        //26.10.2014
+        SYSTEMTIME stmSeason; memset (&stmSeason, 0x0, sizeof (SYSTEMTIME));
+        stmSeason.wYear = 2014; stmSeason.wMonth = 10; stmSeason.wDay = 26; stmSeason.wHour = 2; stmSeason.wMinute = 0; stmSeason.wSecond = 0; stmSeason.wMilliseconds = 0;
+        CTime tmSeason (stmSeason);
+        BOOL bSeason = FALSE;
+
+        CTimeSpan tmSpanIntervalVariable
+            , tmSpanDiff;
         //for (int i = 0; i < m_arInfoTemplate.GetSize (); i ++)
         for (int i = m_iMinNumberExt; i < m_iMaxNumberExt + 1; i ++) {
             m_arInfoSample.Add (is);
@@ -374,9 +382,19 @@ BOOL HCheckStateTemplate::SetInfo (BOOL bFullInfo) {
                 m_arInfoSample.GetAt (m_arInfoSample.GetUpperBound ()).tmLastWrite.GetSecond () == 0)
                 m_arInfoSample.GetAt (m_arInfoSample.GetUpperBound ()).tmLastWrite += 60;
 	        */    
-            is.tmLastWrite -= GetIntervalVariable (m_arInfoSample.GetAt (m_arInfoSample.GetSize () - 1).tmLastWrite, DIRECTION_PAST); //??? ƒÎˇ ÓÚ˜®Ú‡ Á‡ ÏÂÒﬂˆ œ≈–≈Ã≈ÕÕ¿ˇ ‚ÂÎË˜ËÌ¿
+            tmSpanIntervalVariable = GetIntervalVariable (m_arInfoSample.GetAt (m_arInfoSample.GetSize () - 1).tmLastWrite, DIRECTION_PAST); //??? ƒÎˇ ÓÚ˜®Ú‡ Á‡ ÏÂÒﬂˆ œ≈–≈Ã≈ÕÕ¿ˇ ‚ÂÎË˜ËÌ¿
+
+            //26.10.2014
+            tmSpanDiff = is.tmLastWrite - tmSeason;
+            if ((abs (tmSpanDiff.GetTotalSeconds ()) > 0) &&
+                abs (tmSpanDiff.GetTotalSeconds ()) < 86400)
+                ; //tmSpanIntervalVariable += 60 * 60;
+            else
+                ;                
+
+            is.tmLastWrite -= tmSpanIntervalVariable;
             is.iExt --;
-    	    
+
             if (is.iExt < m_iMinNumberExt)
                 //is.iExt = m_arInfoTemplate.GetSize () - 1;
                 is.iExt = m_iMaxNumberExt;
@@ -386,11 +404,11 @@ BOOL HCheckStateTemplate::SetInfo (BOOL bFullInfo) {
             /*strLog.format ("ÕÓÏÂ ‡Ò¯ËÂÌËˇ: 'Template' = %i", m_arInfoSample.GetAt (i).iExt);
             FILELOG_WRITE_WITHDT (MB_HSTRING (strLog), HDEBUG);*/
         }
-    	
+
         m_tmLastUpdate = CTime::GetCurrentTime ();
-        
+
         //SetExtError ();
-        
+
         bRes = true;
     }
     else {

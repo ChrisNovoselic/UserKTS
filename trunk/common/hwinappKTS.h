@@ -20,7 +20,7 @@ public:
 	virtual BOOL InitInstance ();
 	virtual int ExitInstance ();
 
-    enum ID_MODE_APP {MODE_VIEW = 1, MODE_ADMIN = 2, MODE_REMOTE = 4, MODE_LOCAL = 8};
+    enum ID_MODE_APP {MODE_VIEW = 1, MODE_ADMIN = 2, MODE_REMOTE = 4, MODE_LOCAL = 8, MODE_DISABLED_AUTOCREATE = 16};
 	enum ID_HANDLE_EVENT {DIRECTORY_WATCHED = 0, /*GETDATA_05_MIN, GETDATA_30_MIN,*/WHOIS, COUNT_HANDLE_EVENT};
     int SetModeApp (void);
     inline int GetModeApp (void) { return m_iModeApp; }

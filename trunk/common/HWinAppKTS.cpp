@@ -321,6 +321,8 @@ int HWinAppKTS::InitializeDB (void) {
 	strPathApp = GetAppDirectory ();
 	strFileNameApp = GetAppName ();
 
+    cmdLineInfo.m_strFileName = parseParam ("db_cfg").GetBuffer ();
+
 	if (! cmdLineInfo.m_strFileName.IsEmpty ())	{
 	    strFileNameDB = HString (cmdLineInfo.m_strFileName.GetBuffer ());
 
@@ -496,7 +498,8 @@ int HWinAppKTS::SetModeApp (void) {
     FILELOG_VARIABLE
 
     int iRes = 0; //Success
-    
+
+    //Администратор, пользователь
     switch (m_ptrDBSettings->GetOption (HString (_T ("РЕЖИМ_РАБОТЫ"))).number ()) {
         case 0:
             m_iModeApp |= HWinAppKTS::ID_MODE_APP::MODE_VIEW;
@@ -507,11 +510,27 @@ int HWinAppKTS::SetModeApp (void) {
         default:
             ;
     }
-    
+
+    //Удаленно, локально
     if (GetHostName ().compareNoCase (m_ptrDBSettings->GetOption (HString (_T ("HostNameTarget")))) == 0)
         m_iModeApp |= HWinAppKTS::ID_MODE_APP::MODE_LOCAL;
     else
         m_iModeApp |= HWinAppKTS::ID_MODE_APP::MODE_REMOTE; //ID_MODE_APP::MODE_LOCAL - в качестве отладки на РМ
+
+    //Режим по значениям из ком./строки
+    HString strModesApp = parseParam ("modeapp")
+        , strMode;
+    int pos = -1;
+    strMode = strModesApp.tokenize (",", pos);
+
+    while (! (pos < 0)) {
+        if (strMode.compareNoCase ("disabled_autocreate") == 0)
+            m_iModeApp |= HWinAppKTS::ID_MODE_APP::MODE_DISABLED_AUTOCREATE;
+        else
+            ;
+
+        strMode = strModesApp.tokenize (",", pos);
+    }
 
     return iRes;
 }

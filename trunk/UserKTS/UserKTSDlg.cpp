@@ -1379,16 +1379,19 @@ void CUserKTSDlg::OperationCreate (HCheckStateTemplate *pCST, short shNumBeginSo
                 //    else
                 //        ;
                 //}
-                
+
+                if (! (MODE_APP & HWinAppKTS::MODE_DISABLED_AUTOCREATE))
 #if defined _RELEASE
-                if (pItemData->auto_create && (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_LOCAL))
+                    if (pItemData->auto_create && (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_LOCAL))
 #else
-                if (pItemData->auto_create)
+                    if (pItemData->auto_create == TRUE)
 #endif
                         bAutoCreate = true;
+                    else
+                        ;
                 else
                     ;
-                    
+
                 if (bAutoCreate) {//АВТОМАТическое формирование файлов - необходимО АВТОМАТисески Же сформировать m_arPosSelectedItem
                     arPosSelectedItem = pCST->FillArrayPseudoPosSelectedItem (iCountItemCreate);
                     iRes = pCST->FillArrayStringPseudoSelectedItem (arstrExtSelectedItem);

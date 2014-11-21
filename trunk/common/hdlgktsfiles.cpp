@@ -323,8 +323,11 @@ BOOL HDlgKTSFiles::SetEnableOperation (void) {
                     ITEM_DATA *pItemData = ((ITEM_DATA *) TREECTRL_KTS->GetItemData (TREECTRL_KTS->GetSelectedItem ()));
 				    //REQUIREMENT_TEMPLATE
 				    if (m_arDescOperation.GetAt (i)->bRequirementTemplate && (HTreeCtrlKTS::ITEM_LEVEL::TREECTRL_TEMPLATE & iAccessLevel))
-						if (pItemData->auto_create && (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_LOCAL))
-							bAddOperation = false;
+						if ((pItemData->auto_create == TRUE) && (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_LOCAL))
+							if (! (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_DISABLED_AUTOCREATE))
+                                bAddOperation = false;
+                            else
+                                ;
                         else
                             ;
 				    else

@@ -384,7 +384,7 @@ HTREEITEM HTreeCtrlKTS::FindItem (HTREEITEM hItem, int id) {
 BOOL HTreeCtrlKTS::SetEnableMenuTemplate (void) {
 	BOOL bRes = true;
     CMenu* subMenu = 0x0;
-    
+
     if (GetParent ()->GetMenu ())
         subMenu = GetParent ()->GetMenu ()->GetSubMenu (0);
     else

@@ -465,7 +465,7 @@ void HObjectTemplate::SetTarget (HInfoTemplate *pIT, CTime tmCurrent, BOOL bChec
 	                //tmCurrent -= ((m_tmSpanTask.GetTotalSeconds () - m_tmSpanModify.GetTotalSeconds ()) + m_tmSpanWork.GetTotalSeconds ());
 	                tmCurrent -= lRemains;
 
-                    //26.10.2014
+                    //Уловка при переходе на лето-зима 26.10.2014 02:00
                     if (! (tmSpanInterval < 86400))
                         tmCurrent += 60 * 60;
                     else

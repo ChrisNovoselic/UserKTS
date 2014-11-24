@@ -365,7 +365,7 @@ BOOL HCheckStateTemplate::SetInfo (BOOL bFullInfo) {
         //ќтладка
         is.tmLastWrite.GetAsSystemTime (stm);
 
-        //26.10.2014
+        //”ловка при переходе на лето-зима 26.10.2014 02:00
         SYSTEMTIME stmSeason; memset (&stmSeason, 0x0, sizeof (SYSTEMTIME));
         stmSeason.wYear = 2014; stmSeason.wMonth = 10; stmSeason.wDay = 26; stmSeason.wHour = 2; stmSeason.wMinute = 0; stmSeason.wSecond = 0; stmSeason.wMilliseconds = 0;
         CTime tmSeason (stmSeason);
@@ -384,11 +384,12 @@ BOOL HCheckStateTemplate::SetInfo (BOOL bFullInfo) {
 	        */    
             tmSpanIntervalVariable = GetIntervalVariable (m_arInfoSample.GetAt (m_arInfoSample.GetSize () - 1).tmLastWrite, DIRECTION_PAST); //??? ƒл€ отч®та за месяц ѕ≈–≈ћ≈ЌЌј€ величинј
 
-            //26.10.2014
+            //”ловка при переходе на лето-зима 26.10.2014 02:00
             tmSpanDiff = is.tmLastWrite - tmSeason;
-            if ((abs (tmSpanDiff.GetTotalSeconds ()) > 0) &&
-                abs (tmSpanDiff.GetTotalSeconds ()) < 86400)
-                ; //tmSpanIntervalVariable += 60 * 60;
+            if ((! (tmSpanIntervalVariable.GetTotalSeconds () < 86400)) &&
+                ((tmSpanDiff.GetTotalSeconds () > 0) &&
+                (abs (tmSpanDiff.GetTotalSeconds ()) < 86400)))
+                tmSpanIntervalVariable += 60 * 60;
             else
                 ;                
 

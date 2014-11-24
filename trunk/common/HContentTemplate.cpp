@@ -905,11 +905,11 @@ void HContentTemplate::NewTarget (CTime tm, HString strAPath)
 
     CTimeSpan tsVariable = GetIntervalVariable (tm, HDateTimeInterval::DIRECTION_DATETIME::FUTURE);
 
-    //Уловка при переходе на лето-зима 26.10.2014 02:00
-    if (! (tsVariable.GetTotalSeconds () < (24 * 60 * 60)))
-        tm += 60 * 60;
-    else
-        ;
+    ////Уловка при переходе на лето-зима 26.10.2014 02:00
+    //if (! (tsVariable.GetTotalSeconds () < (24 * 60 * 60)))
+    //    tm += 60 * 60;
+    //else
+    //    ;
 
     //Дата/время - НАЧАЛо СБОРа информации
     m_tmTarget = tm;
@@ -1511,10 +1511,10 @@ SYSTEMTIME HContentTemplate::stmTargetLastWritten (void) {
     tmLastWritten.GetAsSystemTime (stmRes);
 
     if (tmSpanInterval.GetDays () > 0) {
-        //Уловка при переходе на лето-зима 26.10.2014 02:00
-        if (m_tmSpanModify.GetHours () > 0)
-            stmRes.wHour = (WORD ) m_tmSpanModify.GetHours () - 1;
-        else
+        ////Уловка при переходе на лето-зима 26.10.2014 02:00
+        //if (m_tmSpanModify.GetHours () > 0)
+        //    stmRes.wHour = (WORD ) m_tmSpanModify.GetHours () - 1;
+        //else
             stmRes.wHour = (WORD ) m_tmSpanModify.GetHours ();
         stmRes.wMinute = (WORD ) m_tmSpanModify.GetMinutes ();
         stmRes.wSecond = (WORD ) m_tmSpanModify.GetSeconds ();

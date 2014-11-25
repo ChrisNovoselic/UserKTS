@@ -521,10 +521,10 @@ int HContentTemplate::GetContentTemplate (int iIdTemplate) //Чтение из БД
 
 	if (iRes == 0) {
 		pRSTemplate = (HRecordset *) m_pmapDBRS [WC_HSTRING (strNameTableTemplate)];
-	        
+
 		if (pRSTemplate) {
 			//EnterCriticalSection ();
-			
+
 			i = 1;
 			if (pRSTemplate->CanScroll ()) {
 				TRY { pRSTemplate->MoveFirst (); }
@@ -569,7 +569,7 @@ int HContentTemplate::GetContentTemplate (int iIdTemplate) //Чтение из БД
 					strLog.format ("HContentTemplate::GetContentTemplate ...цикл шаблона (DEBUG_NEW HOnceLineTemplate - ДО) строка №%i", i);
 					FILELOG_WRITE_WITHDT (MB_HSTRING (strLog), CONTENT_TEMPLATE);
 					FILELOG_ENDIF
-					
+
 					pOLTemplate = NULL;
 					//pOLTemplate = DEBUG_NEW HOnceLineTemplate (strAContent);
 
@@ -1515,7 +1515,7 @@ SYSTEMTIME HContentTemplate::stmTargetLastWritten (void) {
         //if (m_tmSpanModify.GetHours () > 0)
         //    stmRes.wHour = (WORD ) m_tmSpanModify.GetHours () - 1;
         //else
-            stmRes.wHour = (WORD ) m_tmSpanModify.GetHours ();
+        stmRes.wHour = (WORD ) m_tmSpanModify.GetHours ();
         stmRes.wMinute = (WORD ) m_tmSpanModify.GetMinutes ();
         stmRes.wSecond = (WORD ) m_tmSpanModify.GetSeconds ();
     }

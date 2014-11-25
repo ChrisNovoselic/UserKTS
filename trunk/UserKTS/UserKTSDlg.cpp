@@ -1380,19 +1380,26 @@ void CUserKTSDlg::OperationCreate (HCheckStateTemplate *pCST, short shNumBeginSo
                 //        ;
                 //}
 
-                if (! (MODE_APP & HWinAppKTS::MODE_DISABLED_AUTOCREATE))
+                if ((MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_DISABLED_AUTOCREATE) == 0) {
+                    strLog.format (_T ("АвтоСоздание файла НЕ отключено; MODE_APP = %i"), MODE_APP);
+                    FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG); //HDEBUG
 #if defined _RELEASE
                     if (pItemData->auto_create && (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_LOCAL))
 #else
-                    if (pItemData->auto_create == TRUE)
+                    if (pItemData->auto_create)
 #endif
-                        bAutoCreate = true;
+                        bAutoCreate = TRUE;
                     else
                         ;
-                else
-                    ;
+                } else {
+                    strLog.format (_T ("АвтоСоздание файла отключено; MODE_APP = %i"), MODE_APP);
+                    FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG); //HDEBUG
+                }
 
-                if (bAutoCreate) {//АВТОМАТическое формирование файлов - необходимО АВТОМАТисески Же сформировать m_arPosSelectedItem
+                strLog.format (_T ("АвтоСоздание файла = %i"), bAutoCreate);
+                FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG); //HDEBUG
+
+                if (bAutoCreate/* == TRUE*/) {//АВТОМАТическое формирование файлов - необходимО АВТОМАТисески Же сформировать m_arPosSelectedItem
                     arPosSelectedItem = pCST->FillArrayPseudoPosSelectedItem (iCountItemCreate);
                     iRes = pCST->FillArrayStringPseudoSelectedItem (arstrExtSelectedItem);
                 }
@@ -1404,15 +1411,15 @@ void CUserKTSDlg::OperationCreate (HCheckStateTemplate *pCST, short shNumBeginSo
                     arPosSelectedItem = DEBUG_NEW int [iCountItemCreate + 1];
                     memset (arPosSelectedItem, 0x0, (sizeof (int) * (iCountItemCreate + 1)));
                 }
-                
-                strLog.format (_T ("Массив: %i, с размерОМ: %i"), arPosSelectedItem, iCountItemCreate);
-                FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG);
+
+                strLog.format (_T ("Подготовка массива элементов списка: %i, с размерОМ: %i"), arPosSelectedItem, iCountItemCreate);
+                FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG); //HDEBUG
 
                 if (! bAutoCreate) {
                     for (i = 0; i < iCountItemCreate; i++)
                     {
                         arPosSelectedItem [i] = (int) m_arPosSelectedItem.GetAt (i);
-                            
+
                         arstrExtSelectedItem.append (m_ptrListItemFiles->GetItemText ((int) (arPosSelectedItem [i] - 1), 3).GetBuffer ());
                         if ((i + 1) <  iCountItemCreate)
                             arstrExtSelectedItem.appendChar (';');
@@ -1420,36 +1427,36 @@ void CUserKTSDlg::OperationCreate (HCheckStateTemplate *pCST, short shNumBeginSo
                 }
                 else
                     ;
-                
+
                 strLog.format (_T ("Подготовка параметрОВ для потока 'PTR_ARPOSSELECTEDITEM, STRING_AREXTSELECTEDITEM' - количество: %i"), iCountItemCreate);
                 FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG);
-                
+
                 (DYNAMIC_DOWNCAST (HWinThread, pThreadCreateTemplate))->AddData (HThreadCreateTemplate::PTR_ARPOSSELECTEDITEM, arPosSelectedItem, sizeof (int) * (iCountItemCreate + 1));
-                
+
                 strLog.format (_T ("ПередаН параметР для потока 'PTR_ARPOSSELECTEDITEM'"));
                 FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG);
-                
+
                 delete arPosSelectedItem;
                 arPosSelectedItem = NULL;
-                
+
                 strLog.format (_T ("УдалЁн параметР для потока 'PTR_ARPOSSELECTEDITEM'"));
                 FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG);
-                
+
                 (DYNAMIC_DOWNCAST (HWinThread, pThreadCreateTemplate))->AddData (HThreadCreateTemplate::STRING_AREXTSELECTEDITEM, arstrExtSelectedItem);
                 arstrExtSelectedItem.free ();
-                
+
                 strLog.format (_T ("ПередаН параметР для потока 'STRING_AREXTSELECTEDITEM'"));
                 FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG);
-                
+
                 //shNumBeginSource, SHORT_NUMBERBEGINSOURCE
                 (DYNAMIC_DOWNCAST (HWinThread, pThreadCreateTemplate))->AddData (HThreadCreateTemplate::SHORT_NUMBERBEGINSOURCE, &shNumBeginSource, sizeof (short));
-                
+
                 //Надо ОПРЕДЕЛиться с РОДИТЕЛями выбраннОГО ШАБЛОНа для получения строк соединения с БД (strConnectDB) и типа источника данных (strTypeSource)
                 //idParentItem = m_pTreeCtrlTemplate->GetItemID (m_pTreeCtrlTemplate->GetParentItem (m_pTreeCtrlTemplate->GetSelectedItem ()));
                 idParentItem = m_pTreeCtrlTemplate->GetItemID (m_pTreeCtrlTemplate->GetParentItem (pCST->GetHTreeItem ()));
-                
+
                 strTypeSource = PTR_SETTINGS->CompileTypeSource (idParentItem, HDBSettings::SQL_DB | HDBSettings::FILES_DB);
-                
+
                 strLog.format (_T ("Параметр для потока 'STRING_TYPESOURCE': %S"), WC_HSTRING (strTypeSource));
                 FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG);
                 

@@ -517,20 +517,20 @@ int HWinAppKTS::SetModeApp (void) {
     else
         m_iModeApp |= HWinAppKTS::ID_MODE_APP::MODE_REMOTE; //ID_MODE_APP::MODE_LOCAL - в качестве отладки на РМ
 
-    //Режим по значениям из ком./строки
-    HString strModesApp = parseParam ("modeapp")
-        , strMode;
-    int pos = -1;
-    strMode = strModesApp.tokenize (",", pos);
+    ////Режим по значениям из ком./строки
+    //HString strModesApp = parseParam ("modeapp")
+    //    , strMode;
+    //int pos = -1;
+    //strMode = strModesApp.tokenize (",", pos);
 
-    while (! (pos < 0)) {
-        if (strMode.compareNoCase ("disabled_autocreate") == 0)
-            m_iModeApp |= HWinAppKTS::ID_MODE_APP::MODE_DISABLED_AUTOCREATE;
-        else
-            ;
+    //while (! (pos < 0)) {
+    //    if (strMode.compareNoCase ("disabled_autocreate") == 0)
+    //        m_iModeApp |= HWinAppKTS::ID_MODE_APP::MODE_DISABLED_AUTOCREATE;
+    //    else
+    //        ;
 
-        strMode = strModesApp.tokenize (",", pos);
-    }
+    //    strMode = strModesApp.tokenize (",", pos);
+    //}
 
     return iRes;
 }

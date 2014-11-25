@@ -192,22 +192,34 @@ afx_msg void HThreadCreateTemplate::OnResumeRun (WPARAM , LPARAM ) {
         strTmp.free ();
 
 		if (iRes == 0) {
-			FILELOG_IF_WRITE (THREAD_CREATE_TEMPLATE)
+			FILELOG_IF_WRITE (HDEBUG) //THREAD_CREATE_TEMPLATE
 			strLog.format ("Сообщение ГЛПВНому ОКНу от ПОТОКа...%i об окончании работы с БД...УСПЕХ...", m_nThreadID);
-			FILELOG_WRITE_WITHDT (strLog.GetBuffer (), THREAD_CREATE_TEMPLATE);
+			FILELOG_WRITE_WITHDT (strLog.GetBuffer (), HDEBUG); //THREAD_CREATE_TEMPLATE
 			FILELOG_ENDIF
 
 			PostMessage (theApp.m_pMainWnd->m_hWnd, WM_USER_ENDWORKBD_CREATE_TEMPLATE, (WPARAM) m_nThreadID, NULL);
 
-			FILELOG_IF_WRITE (THREAD_CREATE_TEMPLATE)
+			FILELOG_IF_WRITE (HDEBUG) //THREAD_CREATE_TEMPLATE
 			strTmp.format ("Сообщение ГЛПВНому ОКНу от ПОТОКа...%i об инициализации размера ProgressBar's...", m_nThreadID);
-			FILELOG_WRITE_WITHDT (strTmp.GetBuffer (), THREAD_CREATE_TEMPLATE);
+			FILELOG_WRITE_WITHDT (strTmp.GetBuffer (), HDEBUG); //THREAD_CREATE_TEMPLATE
 			FILELOG_ENDIF
 			strTmp.free ();
 
 			PostMessage (::AfxGetMainWnd ()->m_hWnd, WM_USER_PROGRESS_RULES, (WPARAM) (DYNAMIC_DOWNCAST (HThreadCreateTemplate, ::AfxGetThread ()))->m_nThreadID, (GetLengthDataOfId (PTR_ARPOSSELECTEDITEM) - sizeof (long)) / sizeof (int) * (m_pContentTemplateRun->GetCountLine () - 3)); //3 - число строк пропускаемых строк заголовка в 'HContentTemplate::Calculate'
 
+            FILELOG_IF_WRITE (HDEBUG) //THREAD_CREATE_TEMPLATE
+			strTmp.format ("ВХод в цикл 'while' (кол-во элементов=%i) по выбранным элементам в списке...", sizeof (arPosSelectedItem));
+			FILELOG_WRITE_WITHDT (strTmp.GetBuffer (), HDEBUG); //THREAD_CREATE_TEMPLATE
+			FILELOG_ENDIF
+			strTmp.free ();
+
 			while (arPosSelectedItem [i]) {
+                FILELOG_IF_WRITE (HDEBUG) //THREAD_CREATE_TEMPLATE
+			    strTmp.format ("Обработка %i-го элемента списка (позиция = )...", i, arPosSelectedItem [i]);
+			    FILELOG_WRITE_WITHDT (strTmp.GetBuffer (), HDEBUG); //THREAD_CREATE_TEMPLATE
+			    FILELOG_ENDIF
+			    strTmp.free ();
+
 				//pTemplate->SetSpanData (stmBegin.wHour * 60 * 60 + stmBegin.wMinute * 60 + stmBegin.wSecond);
 
 				CTime dtModifyInfoSample = pCST->GetDTModifyInfoSample (int (arPosSelectedItem [i] - 1));
@@ -279,9 +291,9 @@ afx_msg void HThreadCreateTemplate::OnResumeRun (WPARAM , LPARAM ) {
 							iExt ++;
 						}
 
-						/*FILELOG_IF_WRITE (THREAD_CREATE_TEMPLATE)
+						/*FILELOG_IF_WRITE (HDEBUG) //THREAD_CREATE_TEMPLATE
 						strLog.format ("iPosExtSelectedItem = %i длЯ 'arstrExtSelectedItem.Tokenize... %s'", iPosExtSelectedItem, MB_HSTRING (arstrExtSelectedItem));
-						FILELOG_WRITE (strLog.GetBuffer (), THREAD_CREATE_TEMPLATE);
+						FILELOG_WRITE (strLog.GetBuffer (), HDEBUG); //THREAD_CREATE_TEMPLATE
 						FILELOG_ENDIF*/
 
 						//strFullPath = pTreeCtrlTemplate->GetItemFullPath (pCST->GetHTreeItem ());
@@ -325,9 +337,9 @@ afx_msg void HThreadCreateTemplate::OnResumeRun (WPARAM , LPARAM ) {
 								strTmp.insert (0, "0");
 							strFileUndo.append (strTmp);
 
-							FILELOG_IF_WRITE (THREAD_CREATE_TEMPLATE)
+							FILELOG_IF_WRITE (HDEBUG) //THREAD_CREATE_TEMPLATE
 							strLog.format ("%s", MB_HSTRING (strFileUndo));
-							FILELOG_WRITE_WITHDT (strLog.GetBuffer (), THREAD_CREATE_TEMPLATE);
+							FILELOG_WRITE_WITHDT (strLog.GetBuffer (), HDEBUG); //THREAD_CREATE_TEMPLATE
 							FILELOG_ENDIF
 
 							strFileUndo.appendChar ('.');
@@ -365,10 +377,10 @@ afx_msg void HThreadCreateTemplate::OnResumeRun (WPARAM , LPARAM ) {
 							}
 	                        
 							if (strFullPath.isUses () == 1) {
-								FILELOG_IF_WRITE (THREAD_CREATE_TEMPLATE)
+								FILELOG_IF_WRITE (HDEBUG) //THREAD_CREATE_TEMPLATE
 								//strTmp.Format (_T ("%s перенесли КАК %s%s"), strFullPath.GetBuffer (), strFullPathUndo.GetBuffer ());
 								strLog.format ("%s перенесли КАК %s", MB_HSTRING (strFullPath), MB_HSTRING (strFullPathUndo));
-								FILELOG_WRITE (strLog.GetBuffer (), THREAD_CREATE_TEMPLATE);
+								FILELOG_WRITE (strLog.GetBuffer (), HDEBUG); //THREAD_CREATE_TEMPLATE
 								FILELOG_ENDIF
 	                            
 								//Нормальное завершение
@@ -401,9 +413,9 @@ afx_msg void HThreadCreateTemplate::OnResumeRun (WPARAM , LPARAM ) {
 			FILELOG_ENDIF
 		}
 
-        FILELOG_IF_WRITE (THREAD_CREATE_TEMPLATE)
+        FILELOG_IF_WRITE (HDEBUG) //THREAD_CREATE_TEMPLATE
         strLog.format ("Освобождение памяти ...перед завершением ПОТОКа...%i", m_nThreadID);
-        FILELOG_WRITE_WITHDT (strLog.GetBuffer (), THREAD_CREATE_TEMPLATE);
+        FILELOG_WRITE_WITHDT (strLog.GetBuffer (), HDEBUG); //THREAD_CREATE_TEMPLATE
         FILELOG_ENDIF
 
         delete m_pContentTemplateRun;

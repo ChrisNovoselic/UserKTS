@@ -191,7 +191,7 @@ int HTreeCtrlKTS::ChangeItemImage (TVHITTESTINFO &ht) {
                 default:
                     ;
             }
-        
+
 		    nSelectedImage = nImage;
 
 		    bRes = SetItemImage (ht.hItem, nImage, nSelectedImage); //nImage == nSelectedImage !!!    
@@ -201,13 +201,13 @@ int HTreeCtrlKTS::ChangeItemImage (TVHITTESTINFO &ht) {
             m_pmapDBRS.Lookup (_T (TABLENAME_TEMPLATE), (void *&) pRS);
             //Своебразная проверка на 'валидность' pRS
             iRes = m_pmapDBRS.LookupKey (_T (TABLENAME_TEMPLATE), refKey);
-        
+
             if (iRes == TRUE) {
                 iRes = 0;
-        
+
                 pRS->Edit (_T ("ID"), (COleVariant) (long) GetItemID (ht.hItem));
                 pRS->SetFieldValue (_T ("AUTO_CREATE"), (COleVariant)(VARIANT_BOOL) ((ITEM_DATA *) GetItemData (ht.hItem))->auto_create);
-            
+
                 try { pRS->Update (); }
                 catch (CDBException *err) {
                     iRes = ERR_UPDATE_REC_IS_TEMPLATE;
@@ -220,7 +220,7 @@ int HTreeCtrlKTS::ChangeItemImage (TVHITTESTINFO &ht) {
                 ;
 
             ReleaseRS (_T (TABLENAME_TEMPLATE));
-        
+
             //((CUserKTSDlg *) GetParent ())->SetEnableOperation ();
             this->GetParent ()->SendMessage (WM_CHANGE_STAFF_OPERATION);
         }
@@ -229,7 +229,7 @@ int HTreeCtrlKTS::ChangeItemImage (TVHITTESTINFO &ht) {
     }
     else
         ;
-    
+
     return iRes;
 }
 
@@ -237,13 +237,13 @@ int HTreeCtrlKTS::SetParentImage (HTREEITEM hParent, BOOL bCreate) {
     int iRes = 0, //Success
         nImage, nSelectedImage;
     BOOL bRes = false;
-    
+
     while (! hParent == 0) {
         if (bCreate)
             ((ITEM_DATA *) GetItemData (hParent))->auto_create ++;
         else
             ((ITEM_DATA *) GetItemData (hParent))->auto_create --;
-    
+
         if (((ITEM_DATA *) GetItemData (hParent))->auto_create > 0) {
             bRes = GetItemImage (hParent, nImage, nSelectedImage);
 

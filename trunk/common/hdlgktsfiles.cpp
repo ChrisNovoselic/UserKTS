@@ -310,7 +310,7 @@ BOOL HDlgKTSFiles::SetEnableOperation (void) {
             subMenuOperation->DeleteMenu (0, MF_BYPOSITION);
     else
         ;
-            
+
 	//ASSERT (m_pRSOperation);
 
     if (m_arDescOperation.GetSize ()) {     
@@ -324,10 +324,10 @@ BOOL HDlgKTSFiles::SetEnableOperation (void) {
 				    //REQUIREMENT_TEMPLATE
 				    if (m_arDescOperation.GetAt (i)->bRequirementTemplate && (HTreeCtrlKTS::ITEM_LEVEL::TREECTRL_TEMPLATE & iAccessLevel))
 						if ((pItemData->auto_create == TRUE) && (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_LOCAL))
-							if (! (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_DISABLED_AUTOCREATE))
+							//if (! (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_DISABLED_AUTOCREATE))
                                 bAddOperation = false;
-                            else
-                                ;
+                            //else
+                            //    ;
                         else
                             ;
 				    else

@@ -1382,7 +1382,7 @@ void CUserKTSDlg::OperationCreate (HCheckStateTemplate *pCST, short shNumBeginSo
 
                 if ((MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_DISABLED_AUTOCREATE) == 0) {
                     strLog.format (_T ("АвтоСоздание файла НЕ отключено; MODE_APP = %i"), MODE_APP);
-                    FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG); //HDEBUG
+                    FILELOG_WRITE_WITHDT (strLog.GetBuffer (), HDEBUG); //USER_KTS_DLG
 #if defined _RELEASE
                     if (pItemData->auto_create && (MODE_APP & HWinAppKTS::ID_MODE_APP::MODE_LOCAL))
 #else
@@ -1393,11 +1393,11 @@ void CUserKTSDlg::OperationCreate (HCheckStateTemplate *pCST, short shNumBeginSo
                         ;
                 } else {
                     strLog.format (_T ("АвтоСоздание файла отключено; MODE_APP = %i"), MODE_APP);
-                    FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG); //HDEBUG
+                    FILELOG_WRITE_WITHDT (strLog.GetBuffer (), HDEBUG); //USER_KTS_DLG
                 }
 
                 strLog.format (_T ("АвтоСоздание файла = %i"), bAutoCreate);
-                FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG); //HDEBUG
+                FILELOG_WRITE_WITHDT (strLog.GetBuffer (), HDEBUG); //USER_KTS_DLG
 
                 if (bAutoCreate/* == TRUE*/) {//АВТОМАТическое формирование файлов - необходимО АВТОМАТисески Же сформировать m_arPosSelectedItem
                     arPosSelectedItem = pCST->FillArrayPseudoPosSelectedItem (iCountItemCreate);
@@ -1413,7 +1413,7 @@ void CUserKTSDlg::OperationCreate (HCheckStateTemplate *pCST, short shNumBeginSo
                 }
 
                 strLog.format (_T ("Подготовка массива элементов списка: %i, с размерОМ: %i"), arPosSelectedItem, iCountItemCreate);
-                FILELOG_WRITE_WITHDT (strLog.GetBuffer (), USER_KTS_DLG); //HDEBUG
+                FILELOG_WRITE_WITHDT (strLog.GetBuffer (), HDEBUG); //USER_KTS_DLG
 
                 if (! bAutoCreate) {
                     for (i = 0; i < iCountItemCreate; i++)

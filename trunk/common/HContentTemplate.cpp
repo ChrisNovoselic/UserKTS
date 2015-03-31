@@ -905,11 +905,11 @@ void HContentTemplate::NewTarget (CTime tm, HString strAPath)
 
     CTimeSpan tsVariable = GetIntervalVariable (tm, HDateTimeInterval::DIRECTION_DATETIME::FUTURE);
 
-    ////Уловка при переходе на лето-зима 26.10.2014 02:00
-    //if (! (tsVariable.GetTotalSeconds () < (24 * 60 * 60)))
-    //    tm += 60 * 60;
-    //else
-    //    ;
+    //////Уловка при переходе на лето-зима 26.10.2014 02:00
+    ////if (! (tsVariable.GetTotalSeconds () < (24 * 60 * 60)))
+    ////    tm += 60 * 60;
+    ////else
+    ////    ;
 
     //Дата/время - НАЧАЛо СБОРа информации
     m_tmTarget = tm;
@@ -1501,11 +1501,11 @@ SYSTEMTIME HContentTemplate::stmTargetLastWritten (void) {
     CTimeSpan tmSpanInterval = GetIntervalVariable (m_tmTarget, HDateTimeInterval::DIRECTION_DATETIME::FUTURE);
     CTime tmLastWritten (m_tmTarget + tmSpanInterval);
 
-    ////Уловка при переходе на лето-зима 26.10.2014 02:00
-    //if (! (tmSpanInterval.GetTotalSeconds () < (24 * 60 * 60)))
-    //    tmLastWritten -= 60 * 60;
-    //else
-    //    ;
+    //////Уловка при переходе на лето-зима 26.10.2014 02:00
+    ////if (! (tmSpanInterval.GetTotalSeconds () < (24 * 60 * 60)))
+    ////    tmLastWritten -= 60 * 60;
+    ////else
+    ////    ;
 
     //Вариант №1
     tmLastWritten.GetAsSystemTime (stmRes);

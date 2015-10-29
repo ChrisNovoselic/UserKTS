@@ -436,6 +436,7 @@ afx_msg void HThreadGetData::OnMessageTimer (WPARAM wp, LPARAM lp) {
 															            &(*iteratorData).second->arDblValues /*[VALUE]*/ [SECOND_15] [CURRENT]);
 
 					            tm64tQuery = static_cast <__time64_t> ((dtQuery - 25569) * 86400);
+                                tm64tQuery -= 3600;
 
                                 /*strLog.format ("Опрос канала №%i (%i) {%f, %i}", (*iteratorData).first, (*iteratorData).second->idComClient, (float) dtQuery, tm64tQuery);
 		                        FILELOG_WRITE_WITHDT (strLog.GetBuffer (), HDEBUG);*/
@@ -561,8 +562,12 @@ afx_msg void HThreadGetData::OnMessageTimer (WPARAM wp, LPARAM lp) {
 						            //else ; //Условие на '0.0' значения
                                 }
                                 else
-                                    //Некорректное ВРЕМя - возможно канал имеет состояние <НЕТ ДАННЫХ>
+                                {
+                                    //Некорректное ВРЕМя - возможно канал имеет состояние <НЕТ ДАННЫХ>                                    
+                                    //strLog.format ("Разница между текущим и полученным дата/время для %i = %i", iCountPassed, abs (tm64tReal - tm64tQuery));
+                                    //FILELOG_WRITE_WITHDT (MB_HSTRING (strLog), HDEBUG);
                                     array_error [iCountPassed] [TIME_NULL] ++;
+                                }
 					        }
 					        else
 						        //Канала с номером '.first' не существует

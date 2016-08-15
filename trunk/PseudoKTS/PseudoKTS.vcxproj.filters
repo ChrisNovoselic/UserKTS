@@ -27,12 +27,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\HDateTimeInterval.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HDlgKTS.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="HCheckStateTemplate.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
@@ -48,9 +42,6 @@
     <ClCompile Include="PseudoKTS.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="..\common\HObjectTemplate.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="PseudoKTSDoc.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
@@ -60,25 +51,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="..\common\HWinAppKTS.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\hdbsettings.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HEnerg6Data.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HEnergData.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\htreectrlkts.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="htreectrlpseudo.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HCheckStateKTS.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="HDlgGUIFilesDB.cpp">
@@ -90,9 +63,6 @@
     <ClCompile Include="HThreadGUIFilesDB.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="..\common\hdlgktsfiles.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="hdlgguicontrol.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
@@ -102,50 +72,80 @@
     <ClCompile Include="HThreadGUIControl.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="..\common\HEnerg5Data.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDatabase.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hdatabasesql.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlg.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlgChoiceDirectory.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileInfo.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileLog.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HRecordset.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hstring.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinApp.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinThread.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadDirectoryWatched.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadFileLog.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\lib_dttm.cpp">
-      <Filter>Файлы исходного кода</Filter>
+    <ClCompile Include="..\common\HCheckStateKTS.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\UserKTS\common\HData.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDatabase.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hdatabasesql.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HDateTimeInterval.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\hdbsettings.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlg.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlgChoiceDirectory.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HDlgKTS.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\hdlgktsfiles.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HEnerg5Data.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HEnerg6Data.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HEnergData.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileInfo.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HRecordset.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadFileLog.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadDirectoryWatched.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hstring.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileLog.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HWinAppKTS.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\lib_dttm.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinApp.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinThread.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\htreectrlkts.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HObjectTemplate.cpp">
+      <Filter>Файлы исходного кода\common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -173,9 +173,6 @@
     <ClInclude Include="identifiers.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\HThreadDirectoryWatched.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="HDlgGUIFilesDB.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -183,9 +180,6 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="HThreadWriteData.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\hdlgktsfiles.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="hdlgguicontrol.h">
@@ -197,14 +191,20 @@
     <ClInclude Include="HThreadGUIControl.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="..\common\HEnerg5Data.h">
-      <Filter>Заголовочные файлы</Filter>
+    <ClInclude Include="..\common\hdlgktsfiles.h">
+      <Filter>Заголовочные файлы\common</Filter>
     </ClInclude>
     <ClInclude Include="..\common\HEnerg6Data.h">
-      <Filter>Заголовочные файлы</Filter>
+      <Filter>Заголовочные файлы\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HEnerg5Data.h">
+      <Filter>Заголовочные файлы\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\HThreadDirectoryWatched.h">
+      <Filter>Заголовочные файлы\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\UserKTS\common\common_identifiers.h">
-      <Filter>Заголовочные файлы</Filter>
+      <Filter>Заголовочные файлы\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -58,17 +58,17 @@
     <ClInclude Include="SDDControlApp.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\include\hwinapp.h">
-      <Filter>Заголовочные файлы</Filter>
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\include\HFileInfo.h">
+      <Filter>Заголовочные файлы\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\include\HFileLog.h">
-      <Filter>Заголовочные файлы</Filter>
+      <Filter>Заголовочные файлы\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\include\hstring.h">
-      <Filter>Заголовочные файлы</Filter>
+      <Filter>Заголовочные файлы\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\include\HFileInfo.h">
-      <Filter>Заголовочные файлы</Filter>
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\include\hwinapp.h">
+      <Filter>Заголовочные файлы\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -78,17 +78,17 @@
     <ClCompile Include="SDDControlApp.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileInfo.cpp">
+      <Filter>Файлы исходного кода\lib</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileLog.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы исходного кода\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hstring.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы исходного кода\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinApp.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileInfo.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы исходного кода\lib</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -33,55 +33,55 @@
     <ClCompile Include="Test001.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\lib_dttm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HA2KW.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileInfo.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileLog.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HA2KW.cpp">
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hstring.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadFileLog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinThread.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinApp.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinThread.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\lib_dttm.cpp">
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\HFileLog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\hstring.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\HThreadFileLog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\HWinThread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\UserKTS\common\common_identifiers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\include\hwinapp.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\HFileLog.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\hstring.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\HThreadFileLog.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\HWinThread.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\UserKTS\common\common_identifiers.h">
+      <Filter>Header Files\common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

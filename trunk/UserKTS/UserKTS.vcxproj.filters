@@ -13,51 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{ff0f48cd-0651-4c16-a7cc-7d6b453e9410}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\common">
+      <UniqueIdentifier>{8af571b2-48f9-4938-badd-d4c9ec6f4062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib">
+      <UniqueIdentifier>{7ca367cf-3cf0-48b6-9be5-782417c87080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{86597ab2-625a-4c2e-8b5b-f6ea0a43b34a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HCheckStateTemplate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\common\HContentTemplate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HData.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HDateTimeInterval.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HDlgChoiceDirectoryTemplate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HEnerg5Data.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HEnerg6Data.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HEnergData.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HObjectTemplate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HOnceLineTemplate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HThreadCreateTemplate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HThreadUndoClear.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HTornado1Data.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HTornado6Data.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HTornadoData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
@@ -72,108 +51,108 @@
     <ClCompile Include="UserKTSDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\common\HWinAppKTS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\HDlgKTS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HThreadDescription.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\common\htreectrlkts.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\common\HCheckStateKTS.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HContentTemplate.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HData.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HDateTimeInterval.cpp">
+      <Filter>Source Files\common</Filter>
     </ClCompile>
     <ClCompile Include="..\common\hdbsettings.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\common</Filter>
     </ClCompile>
-    <ClCompile Include="..\common\HCheckStateKTS.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\common\HDlgKTS.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HEnerg5Data.cpp">
+      <Filter>Source Files\common</Filter>
     </ClCompile>
     <ClCompile Include="..\common\HDlgKTSFiles.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HEnerg6Data.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HObjectTemplate.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HOnceLineTemplate.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HTornadoData.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HTornado6Data.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HTornado1Data.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\htreectrlkts.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HWinAppKTS.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\HEnergData.cpp">
+      <Filter>Source Files\common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDatabase.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hdatabasesql.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlg.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlgChoiceDirectory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileInfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileLog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HRecordset.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hstring.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadDirectoryWatched.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HRecordset.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileLog.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileInfo.cpp">
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadFileLog.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinThread.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadDirectoryWatched.cpp">
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\lib_dttm.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinThread.cpp">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinApp.cpp">
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HCheckStateTemplate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\common\HContentTemplate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HDateTimeInterval.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HEnerg5Data.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HEnerg6Data.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HEnergData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HObjectTemplate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HOnceLineTemplate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="HThreadCreateTemplate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HThreadUndoClear.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HTornado1Data.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HTornado6Data.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\HTornadoData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
@@ -194,38 +173,71 @@
     <ClInclude Include="UserKTSDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\hwinapp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\hwinappKTS.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\common_identifiers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="HThreadDescription.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="identifiers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\hdatabasesql.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\htreectrlKTS.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\HThreadDirectoryWatched.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\common\common_identifiers.h">
+      <Filter>Header Files\common</Filter>
     </ClInclude>
     <ClInclude Include="..\common\HCheckStateKTS.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HContentTemplate.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HData.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\hdatabasesql.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HDateTimeInterval.h">
+      <Filter>Header Files\common</Filter>
     </ClInclude>
     <ClInclude Include="..\common\HDlgKTS.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\common</Filter>
     </ClInclude>
     <ClInclude Include="..\common\HDlgKTSFiles.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HEnerg5Data.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HEnerg6Data.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HObjectTemplate.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HEnergData.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HOnceLineTemplate.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HTornado1Data.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\HThreadDirectoryWatched.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HTornado6Data.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\HTornadoData.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\htreectrlKTS.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\hwinapp.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\hwinappKTS.h">
+      <Filter>Header Files\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

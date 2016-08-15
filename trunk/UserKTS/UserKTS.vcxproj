@@ -88,7 +88,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>version.lib;C:\Program Files\Microsoft SDKs\Windows\v7.0A\Lib\odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>version.lib;C:\Program Files (x86)\Microsoft SDKs\Windows\v6.0A\lib\odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateMapFile>true</GenerateMapFile>
       <MapExports>true</MapExports>
     </Link>
@@ -166,19 +166,19 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDatabase.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hdatabasesql.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlg.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HDlgChoiceDirectory.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileInfo.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HFileLog.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HRecordset.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\hstring.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadDirectoryWatched.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HThreadFileLog.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinApp.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\HWinThread.cpp" />
-    <ClCompile Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\src\lib_dttm.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HDatabase.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\hdatabasesql.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HDlg.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HDlgChoiceDirectory.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HFileInfo.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HFileLog.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HRecordset.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\hstring.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HThreadDirectoryWatched.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HThreadFileLog.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HWinApp.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HWinThread.cpp" />
+    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\lib_dttm.cpp" />
     <ClCompile Include="..\common\htreectrlkts.cpp" />
     <ClCompile Include="..\common\hdbsettings.cpp" />
     <ClCompile Include="..\common\HWinAppKTS.cpp" />
@@ -207,8 +207,9 @@
     <ClCompile Include="UserKTSDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\hdatabasesql.h" />
-    <ClInclude Include="..\..\include\hwinapp.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\hdatabasesql.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HThreadDirectoryWatched.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\hwinapp.h" />
     <ClInclude Include="..\common\hwinappKTS.h" />
     <ClInclude Include="..\common\htreectrlKTS.h" />
     <ClInclude Include="..\common\common_identifiers.h" />
@@ -229,7 +230,6 @@
     <ClInclude Include="HCheckStateTemplate.h" />
     <ClInclude Include="HThreadCreateTemplate.h" />
     <ClInclude Include="HThreadDescription.h" />
-    <ClInclude Include="..\..\include\HThreadDirectoryWatched.h" />
     <ClInclude Include="HThreadUndoClear.h" />
     <ClInclude Include="identifiers.h" />
     <ClInclude Include="resource.h" />

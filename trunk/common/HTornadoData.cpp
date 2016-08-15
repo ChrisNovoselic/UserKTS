@@ -138,7 +138,7 @@ double HTornadoData::GetValueOfChannel (char *pchSignal, CTime tmBegin, int peri
     //"SELECT optname, int_value_002 FROM sys_options WHERE optname = 'grinvich' OR 'oper_interval'"
     //sys_options.optname = 'grinvich' int_value_002 = 7
     //sys_options.optname = 'oper_interval' int_value_002 = 60
-    tmBegin -= (6 + offsetIndexField) * 60 * 60;
+    tmBegin -= (7 + offsetIndexField) * 60 * 60;
 
     CTime tmEnd = tmBegin + (period * 60);
     //tmEnd -= 1; // ¿  ‚ 'TORNADo'

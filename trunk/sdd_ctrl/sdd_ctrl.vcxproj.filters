@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Заголовочные файлы\include">
+      <UniqueIdentifier>{54b70958-009b-4dad-b25b-3857a8202057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\common">
+      <UniqueIdentifier>{2a0e32ab-a1e1-4553-9050-a55cf0228d48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\lib">
+      <UniqueIdentifier>{088a3e5d-6613-4afe-98f4-32128c95f58b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\common">
+      <UniqueIdentifier>{01410364-62cc-4ebf-ab03-ea627c2ea694}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="icon_sdd.ico">

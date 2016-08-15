@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы исходного кода\lib">
+      <UniqueIdentifier>{6659013d-2a2a-46b6-8fe4-62fcbea4d42e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\common">
+      <UniqueIdentifier>{3bebbc55-20df-4d55-b394-29d17855debd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\include">
+      <UniqueIdentifier>{93ca9118-aeb8-4d89-8b53-dd8ba9ecfaec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\common">
+      <UniqueIdentifier>{f9cac1b5-4ed4-40a7-b414-530dbf3fc10f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\common\HDateTimeInterval.cpp">

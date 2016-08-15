@@ -5,7 +5,7 @@
 #pragma once
 
 #ifndef _SECURE_ATL
-#define _SECURE_ATL 1
+#define _SECURE_ATL
 #endif
 
 #ifndef VC_EXTRALEAN
@@ -32,6 +32,8 @@
 #include <afxmt.h>			//Поддержка event's
 
 #include <winsock.h>
+
+#include <atlstr.h>
 
 #include <vector>
 #include <map>

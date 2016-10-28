@@ -36,7 +36,8 @@
 #include <vector>
 #include <map>
 
-#define ENUM_INCREMENT(enumInstance) inline enumInstance operator++ (enumInstance &id) { return id = (enumInstance) (id + 1); }
+#define ENUM_PREFIXINCREMENT(enumInstance) inline enumInstance& operator++ (enumInstance &id) { return id = static_cast<enumInstance>(static_cast<int>(id) + 1); }
+#define ENUM_POSTFIXINCREMENT(enumInstance) inline enumInstance operator++ (enumInstance &id, int) { enumInstance prev = id; id = static_cast<enumInstance>(static_cast<int>(id) + 1); return prev; }
 #define ENUM_PLUS(enumInstance) inline enumInstance operator+ (enumInstance &id, int inc) { return id = (enumInstance) (id + inc); }
 
 #define PTR_DB ((HWinAppKTS *) AfxGetApp ())->GetPtrDB ()

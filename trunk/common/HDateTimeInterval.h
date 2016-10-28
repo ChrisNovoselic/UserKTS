@@ -37,7 +37,7 @@ private:
     CMap <int, int, HString, HString> m_mapIntervalName;
 };
 
-ENUM_INCREMENT (INDEX_TIME)
+ENUM_POSTFIXINCREMENT (INDEX_TIME)
 
 #define DECLARE_HDATETIMEINTERVAL HDateTimeInterval *g_ptrDateTimeInterval = DEBUG_NEW HDateTimeInterval ();
 #define EXT_DECLARE_HDATETIMEINTERVAL extern HDateTimeInterval *g_ptrDateTimeInterval;

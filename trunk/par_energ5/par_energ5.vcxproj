@@ -66,7 +66,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)\par_energ5;$(SolutionDir)\common;D:\My Project%27s\Work%27s\C++\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\HCppClassLibrary\include;..\..\HCppClassLibrary\src;$(SolutionDir)\$(ProjectName);$(SolutionDir)\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <StructMemberAlignment>1Byte</StructMemberAlignment>
@@ -85,8 +85,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\lib\src\HFileLog.cpp" />
-    <ClCompile Include="..\..\lib\src\HThreadFileLog.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HFileLog.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HThreadFileLog.cpp" />
     <ClCompile Include="..\common\main.cpp" />
     <ClCompile Include="par_energ5.cpp" />
     <ClCompile Include="stdafx.cpp" />

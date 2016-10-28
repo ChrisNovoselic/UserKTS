@@ -56,7 +56,8 @@
 #define ENERG_GROUP                 "grp"
 //#define TORNADO_SIGNAL              "sgnl"
 
-#define ENUM_INCREMENT(enumInstance) inline enumInstance operator++ (enumInstance &id) { return id = (enumInstance) (id + 1); }
+#define ENUM_PREFIXINCREMENT(enumInstance) inline enumInstance& operator++ (enumInstance &id) { return id = static_cast<enumInstance>(static_cast<int>(id) + 1); }
+#define ENUM_POSTFIXINCREMENT(enumInstance) inline enumInstance operator++ (enumInstance &id, int) { enumInstance prev = id; id = static_cast<enumInstance>(static_cast<int>(id) + 1); return prev; }
 #define ENUM_PLUS(enumInstance) inline enumInstance operator+ (enumInstance &id, int inc) { return id = (enumInstance) (id + inc); }
 
 #include <hstring.h>
@@ -64,7 +65,7 @@
 
 #include <HFileInfo.h>			//Класс для получения информации о файле
 
-#include <HError.h>
+#include "HError.h"
 
 #include <hthreadfilelog.h>		//Для подключения возможности открыть ПОТОК с сообщениями в ЛОГ-файл
 

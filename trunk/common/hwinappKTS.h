@@ -79,7 +79,7 @@ private:
 };
 
 //ENUM_PLUS (HWinAppKTS::ID_HANDLE_EVENT)
-ENUM_INCREMENT (HWinAppKTS::ID_HANDLE_EVENT)
+ENUM_POSTFIXINCREMENT (HWinAppKTS::ID_HANDLE_EVENT)
 
 #define APP_HANDLE_EVENT(id) ((HWinAppKTS *) AfxGetApp ())->m_arHandleEvent [id]
 

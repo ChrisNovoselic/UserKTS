@@ -83,7 +83,10 @@ private:
 	
 };
 
-ENUM_INCREMENT (HDlgKTSFiles::ID_INDICATORS);
+ENUM_POSTFIXINCREMENT (HDlgKTSFiles::ID_INDICATORS);
+//inline HDlgKTSFiles::ID_INDICATORS operator++ (HDlgKTSFiles::ID_INDICATORS &id, int) { return id = (HDlgKTSFiles::ID_INDICATORS)(id + 1); }
+//inline HDlgKTSFiles::ID_INDICATORS operator++ (HDlgKTSFiles::ID_INDICATORS &id, int) { HDlgKTSFiles::ID_INDICATORS prev = id; id = static_cast<HDlgKTSFiles::ID_INDICATORS>(static_cast<int>(id) + 1); return prev; }
+
 
 #define MODIFY_DATETIME_FILE(pSCT, strFullPath, pos) { \
 													CFileFind filefind; CFileStatus fStatus; \

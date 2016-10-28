@@ -41,7 +41,7 @@ private:
     int InitializeListCtrl (int );
 };
 
-ENUM_INCREMENT (HDlgGUIControl::ID_INDICATORS);
+ENUM_POSTFIXINCREMENT (HDlgGUIControl::ID_INDICATORS);
 
 #else
 #endif //_HDLG_GUI_CONTROL_

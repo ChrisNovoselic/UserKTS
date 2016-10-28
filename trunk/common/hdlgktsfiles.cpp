@@ -53,7 +53,7 @@ int HDlgKTSFiles::CreateStatusBar (CWnd *pParent) {
     m_ptrStatusBar = DEBUG_NEW CStatusBar ();
 	m_ptrStatusBar->Create (pParent);
     m_arIdIndicators = DEBUG_NEW UINT [COUNT_INDICATORS];
-    for (ID_INDICATORS id = ID_INDICATOR_TEMPLATE; id < COUNT_INDICATORS; id ++) { m_arIdIndicators [id] = WM_USER + 967 + id; }
+    for (ID_INDICATORS id = ID_INDICATOR_TEMPLATE; id < COUNT_INDICATORS; id++) { m_arIdIndicators [id] = WM_USER + 967 + id; }
     m_ptrStatusBar->SetIndicators (m_arIdIndicators, COUNT_INDICATORS);
 
     //Size the four panes

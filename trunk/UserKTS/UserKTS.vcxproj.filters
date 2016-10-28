@@ -105,43 +105,43 @@
     <ClCompile Include="..\common\HEnergData.cpp">
       <Filter>Source Files\common</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HDatabase.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HDatabase.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\hdatabasesql.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\hdatabasesql.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HDlg.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HDlg.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HDlgChoiceDirectory.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HDlgChoiceDirectory.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HRecordset.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HFileInfo.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HFileInfo.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HFileLog.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HFileLog.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HRecordset.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\hstring.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\hstring.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HThreadDirectoryWatched.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HThreadDirectoryWatched.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HThreadFileLog.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HThreadFileLog.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HWinThread.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HWinApp.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\lib_dttm.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\HWinThread.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HWinApp.cpp">
+    <ClCompile Include="..\..\HCppClassLibrary\src\lib_dttm.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
   </ItemGroup>
@@ -230,13 +230,19 @@
     <ClInclude Include="..\common\hwinappKTS.h">
       <Filter>Header Files\common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\hdatabasesql.h">
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\HFileInfo.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HThreadDirectoryWatched.h">
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\hwinapp.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\hwinapp.h">
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\HThreadDirectoryWatched.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\hdatabasesql.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\hstring.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
   </ItemGroup>

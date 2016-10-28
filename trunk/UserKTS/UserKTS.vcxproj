@@ -72,8 +72,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>D:\My Project%27s\Work%27s\C++\HCppClassLibrary\include;D:\WinDDK\7600.16385.1\inc\atl71;D:\WinDDK\7600.16385.1\inc\mfc42;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\WinDDK\7600.16385.1\lib\ATL\i386;D:\WinDDK\7600.16385.1\lib\Mfc\i386;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -123,7 +123,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(SolutionDir)\$(ProjectName);..\..\include;$(SolutionDir)\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\HCppClassLibrary\include;..\..\HCppClassLibrary\src;$(SolutionDir)\$(ProjectName);$(SolutionDir)\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <StructMemberAlignment>1Byte</StructMemberAlignment>
       <PreprocessorDefinitions>_UNICODE;UNICODE;NDEBUG;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -166,19 +166,19 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HDatabase.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\hdatabasesql.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HDlg.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HDlgChoiceDirectory.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HFileInfo.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HFileLog.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HRecordset.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\hstring.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HThreadDirectoryWatched.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HThreadFileLog.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HWinApp.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\HWinThread.cpp" />
-    <ClCompile Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\src\lib_dttm.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HDatabase.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\hdatabasesql.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HDlg.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HDlgChoiceDirectory.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HFileInfo.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HFileLog.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HRecordset.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\hstring.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HThreadDirectoryWatched.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HThreadFileLog.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HWinApp.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\HWinThread.cpp" />
+    <ClCompile Include="..\..\HCppClassLibrary\src\lib_dttm.cpp" />
     <ClCompile Include="..\common\htreectrlkts.cpp" />
     <ClCompile Include="..\common\hdbsettings.cpp" />
     <ClCompile Include="..\common\HWinAppKTS.cpp" />
@@ -207,9 +207,11 @@
     <ClCompile Include="UserKTSDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\hdatabasesql.h" />
-    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HThreadDirectoryWatched.h" />
-    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\hwinapp.h" />
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\hdatabasesql.h" />
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\HFileInfo.h" />
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\hstring.h" />
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\HThreadDirectoryWatched.h" />
+    <ClInclude Include="..\..\..\..\..\My Project%27s\Work%27s\C++\HCppClassLibrary\include\hwinapp.h" />
     <ClInclude Include="..\common\hwinappKTS.h" />
     <ClInclude Include="..\common\htreectrlKTS.h" />
     <ClInclude Include="..\common\common_identifiers.h" />

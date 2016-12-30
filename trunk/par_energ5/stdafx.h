@@ -63,9 +63,14 @@
 #include <hstring.h>
 #include <HA2KW.h>
 
+#include <common_identifiers.h>
+
 #include <HFileInfo.h>			//Класс для получения информации о файле
 
-#include "HError.h"
+//#include "HError.h"
+
+
+#include <hwinapp.h>
 
 #include <hthreadfilelog.h>		//Для подключения возможности открыть ПОТОК с сообщениями в ЛОГ-файл
 

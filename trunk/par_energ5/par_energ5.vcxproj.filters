@@ -44,12 +44,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\HFileLog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\HThreadFileLog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="par_energ5.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -61,6 +55,33 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HA2KW.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HFileLog.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HThreadFileLog.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\UserKTS\par_energ5\identifiers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\hwinapp.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HWinThread.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HFileInfo.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\UserKTS\common\common_identifiers.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\UserKTS\common\HData.h">
+      <Filter>Header Files\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

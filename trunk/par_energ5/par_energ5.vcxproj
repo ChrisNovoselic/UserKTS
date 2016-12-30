@@ -14,6 +14,7 @@
     <ProjectGuid>{C98184D4-C564-4C4E-9D5B-BC5EA78B1EB2}</ProjectGuid>
     <RootNamespace>par_energ5</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -26,6 +27,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -57,6 +59,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)\$(ProjectName);..\..\HCppClassLibrary\include;..\..\HCppClassLibrary;$(SolutionDir)\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -92,8 +95,15 @@
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\HFileLog.h" />
-    <ClInclude Include="..\..\include\HThreadFileLog.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HA2KW.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HFileInfo.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HFileLog.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HThreadFileLog.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\hwinapp.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\HCppClassLibrary\include\HWinThread.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\UserKTS\common\common_identifiers.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\UserKTS\common\HData.h" />
+    <ClInclude Include="..\..\..\..\MyProject%27s\C++\UserKTS\par_energ5\identifiers.h" />
     <ClInclude Include="par_energ5.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />

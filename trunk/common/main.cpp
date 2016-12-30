@@ -17,7 +17,9 @@
 #include "par_tornado_ptk_6.h"
 #endif
 
+#ifdef _USE_SQL
 #include "HData.h" //Для получения списка параметров для подключения к БД
+#endif
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -27,7 +29,7 @@
 
 CWinApp theApp;
 DECLARE_HA2KW
-DECLARE_HFILELOG
+EXT_DECLARE_HFILELOG
 
 using namespace std;
 
